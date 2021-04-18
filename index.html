@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Expense Tracker</title>
+</head>
+<body>
+
+    <div id="banner">
+        <h1 id="banner-text">Trackin' That Paper</h1>
+    </div>
+
+   <div id="expenses-input">
+    <label for="type">Type</label>
+    <input id="expense-type" type="text" placeholder="Cash, card, check etc.." required>
+        <br>
+    <label for="date">When</label>
+    <input id="expense-date" type="date">
+        <br>
+    <label for="description">For</label>
+    <input id="expense-description" type="text" placeholder="What or where?">
+        <br>
+    <label for="amount">Amount</label>
+    <input id="expense-amount" type="number" placeholder="How much?">
+    <br>
+    </div> 
+    
+    <button id="add-btn" type="submit">Add Expense</button>
+   
+
+    <h1 id="expenses-header">My Expenses</h1>
+   
+   <div id="expenses-container">
+
+    <div id="new-expenses">
+        <table id="expense-list">
+            <tr>
+                <td id="list-header">Expense Type</td>
+                <td id="list-header">Date</td>
+                <td id="list-header">Description</td>
+                <td id="list-header">Amount</td>
+              </tr>
+        </table>
+    </div>
+ 
+   </div>
+   <script src="app.js"></script>
+</body>
+</html>
