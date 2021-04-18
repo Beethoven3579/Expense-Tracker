@@ -13,20 +13,25 @@
     </div>
 
    <div id="expenses-input">
+    <form id="form">
     <label for="type">Type</label>
     <input id="expense-type" type="text" placeholder="Cash, card, check etc.." required>
         <br>
     <label for="date">When</label>
-    <input id="expense-date" type="date">
+    <input id="expense-date" type="date" required>
         <br>
     <label for="description">For</label>
-    <input id="expense-description" type="text" placeholder="What or where?">
+    <input id="expense-description" type="text" placeholder="What?" required>
         <br>
-    <label for="amount">Amount</label>
-    <input id="expense-amount" type="number" placeholder="How much?">
+    <label for="location">Where</label>
+    <input id="expense-location" type="text" placeholder="Location?" required>
     <br>
-    </div> 
+    <label for="amount">Amount</label>
+    <input id="expense-amount" type="number" placeholder="How much?" required>
     
+    </form>
+    </div> 
+
     <button id="add-btn" type="submit">Add Expense</button>
    
 
@@ -40,6 +45,7 @@
                 <td id="list-header">Expense Type</td>
                 <td id="list-header">Date</td>
                 <td id="list-header">Description</td>
+                <td id="list-header">Location</td>
                 <td id="list-header">Amount</td>
               </tr>
         </table>
