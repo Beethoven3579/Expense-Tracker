@@ -4,18 +4,7 @@ document.getElementById('add-btn')
 .addEventListener('click', (e) => {
     e.preventDefault();
 
-// Latest attampt at preventing an empty expense from rendering.....
-
-    // const expenseInput = document.querySelectorAll('input')
-    // for (input of expenseInput) {
-    //     if (input.value) {
-    //         alert('Please Fill In All Fields')
-    //     }else {
-    //         addExpense();
-    //     }
-    // }
-
-    addExpense();
+  addExpense();
 })
 
 
@@ -54,9 +43,6 @@ function newExpense(expenseItem) {
      date.value = '';
      description.value = '';
      amount.value = '';
-
-     
-
 }
 
 function addExpense(expense) {
@@ -74,7 +60,7 @@ function deleteExpense(deleteButton, expenseItem) {
     for (let i = 0; i < expenseArray.length; i++) {
         if (expenseArray[i].id === expenseItem.id) {
         expenseArray.splice(i, 1);
-        localStorage.setItem('expenseArray', JSON.stringify(expenseArray))
+        localStorage.setItem('expenseArray', JSON.stringify(expenseArray));
         }
     }
 }
@@ -85,9 +71,9 @@ function addToLocalStorage(expenseItem) {
 
 //THIS Logic was not working. I wonder what I have missed here!!!
 
-// window.addEventListener('load', (e) => {
-//     e.preventDefault();
-//     expenseArray.forEach(expense => {
-//         newExpense(expense);
-//     })
-//  })
+window.addEventListener('load', (e) => {
+    e.preventDefault();
+    expenseArray.forEach(expense => {
+        newExpense(expense);
+    })
+ })
