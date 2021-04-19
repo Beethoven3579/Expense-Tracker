@@ -14,4 +14,4 @@ and yet challenging aspect of this project was beggining to implement object ori
 
 ## About Me
 
-Nick Paolino -- Full time programming student -- [LinkedIn](https://www.linkedin.com/in/nick-paolino-00469291/)
+Nick Paolino -- Full-Time Programming Student -- [LinkedIn](https://www.linkedin.com/in/nick-paolino-00469291/)
