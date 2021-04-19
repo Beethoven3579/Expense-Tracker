@@ -12,7 +12,7 @@ document.getElementById('add-btn')
 
     const expenseItem = {
         id: Date.now(),
-        expenseType: type.value,
+        expenseType: type.value, 
         expenseDate: date.value,
         expenseDescription: description.value,
         expenseLocation: location.value,
@@ -40,10 +40,10 @@ function newExpense(expense) {
     const cell4 = row.insertCell(3);
     const cell5 = row.insertCell(4);
 
-    cell1.textContent = expense.expenseType
-    cell2.textContent = expense.expenseDate
-    cell3.textContent = expense.expenseDescription
-    cell4.textContent = expense.expenseLocation
+    cell1.textContent = expense.expenseType;
+    cell2.textContent = expense.expenseDate;
+    cell3.textContent = expense.expenseDescription;
+    cell4.textContent = expense.expenseLocation;
     cell5.textContent = `$${expense.expenseAmount}`;
     cell5.style.color = 'red';
     
@@ -80,8 +80,6 @@ function deleteExpense(deleteButton, expense) {
 function addToLocalStorage(expense) {
     localStorage.setItem('expenseArray', JSON.stringify(expenseArray));
 }
-
-//THIS Logic was not working. I wonder what I have missed here!!!
 
 window.addEventListener('load', (e) => {
     e.preventDefault();
