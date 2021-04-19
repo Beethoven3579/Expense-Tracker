@@ -4,7 +4,7 @@
  
 #### You can test the app [here](https://beethoven3579.github.io/Expense-Tracker/) 
 
-![](ExpenseTrackerScreenShot.png)
+![](ExpenseTrackerScreenShot1.png)
 
 ## Project Summary
 
