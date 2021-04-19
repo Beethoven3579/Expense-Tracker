@@ -19,8 +19,14 @@ document.getElementById('add-btn')
         expenseAmount: amount.value
         
     }
-  addExpense(expenseItem);
-})
+
+    if (type.value === '' ||  date.value === '' || description.value === '' ||
+    location.value === '' || amount.value === '') {
+        alert('Please fill out all fields'); 
+    }else {
+     addExpense(expenseItem); 
+        }
+});
 
 
 
