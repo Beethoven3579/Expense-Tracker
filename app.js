@@ -1,31 +1,28 @@
 const expenseArray = JSON.parse(localStorage.getItem('expenseArray')) || [];
 
+const date = document.getElementById('expense-date');
+const type = document.getElementById('expense-type');
+const description = document.getElementById('expense-description');
+const vendor = document.getElementById('expense-location');
+const amount = document.getElementById('expense-amount');
+
 document.getElementById('add-btn')
 .addEventListener('click', (e) => {
     e.preventDefault();
-
-    const date = document.getElementById('expense-date');
-    const type = document.getElementById('expense-type');
-    const description = document.getElementById('expense-description');
-    const location = document.getElementById('expense-location');
-    const amount = document.getElementById('expense-amount');
 
     const expenseItem = {
         id: Date.now(),
         expenseType: type.value, 
         expenseDate: date.value,
         expenseDescription: description.value,
-        expenseLocation: location.value,
-        expenseAmount: amount.value
-        
+        expenseLocation: vendor.value,
+        expenseAmount: formatAmount(amount.value)
     }
 
-    if (type.value === '' ||  date.value === '' || description.value === '' ||
-    location.value === '' || amount.value === '') {
-        alert('Please fill out all fields'); 
-    }else {
-     addExpense(expenseItem); 
-        }
+    isValidateForm() ?
+    alert('Please fill out all fields') : 
+    addExpense(expenseItem); 
+        
 });
 
 
@@ -80,7 +77,20 @@ function deleteExpense(deleteButton, expense) {
 function addToLocalStorage(expense) {
     localStorage.setItem('expenseArray', JSON.stringify(expenseArray));
 }
+function formatAmount(amount) {
+    return (amount = parseFloat(amount).toFixed(2));
+}
+function isValidateForm() {
+    const isInputEmpty = 
+    !type.value ||
+    !date.value ||
+    !description.value ||
+    !amount.value ||
+    !vendor.value;
 
+return isInputEmpty ? true : false;
+
+}
 window.addEventListener('load', (e) => {
     e.preventDefault();
     expenseArray.forEach(expense => {
