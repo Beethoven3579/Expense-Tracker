@@ -8,7 +8,7 @@
 
 ## Project Summary
 
-While creating this application, I learned how to implement and use the <table> tag in HTML. I learned how to use 
+While creating this application, I learned how to implement and use the table tag in HTML. I learned how to use 
 insertRow() and insertCell() in Javascript. This project also help solidify the use of JSON and Local Storage. The most helpful
 and yet challenging aspect of this project was beggining to implement object oriented programming. 
 
